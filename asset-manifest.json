@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Michal-React-MVC/static/css/main.b938555f.css",
+    "main.js": "/Michal-React-MVC/static/js/main.952f51be.js",
+    "static/js/453.ad6eb26e.chunk.js": "/Michal-React-MVC/static/js/453.ad6eb26e.chunk.js",
+    "index.html": "/Michal-React-MVC/index.html",
+    "main.b938555f.css.map": "/Michal-React-MVC/static/css/main.b938555f.css.map",
+    "main.952f51be.js.map": "/Michal-React-MVC/static/js/main.952f51be.js.map",
+    "453.ad6eb26e.chunk.js.map": "/Michal-React-MVC/static/js/453.ad6eb26e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b938555f.css",
+    "static/js/main.952f51be.js"
+  ]
+}
