@@ -1,38 +1,334 @@
+.scale-small {
+  font-size: 14px;
+}
+
+.scale-medium {
+  font-size: 18px;
+}
+
+.scale-large {
+  font-size: 22px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1719273600&semt=sph');
+  background-size: cover;
+  color: #333;
+}
+
+body.high-contrast {
+  background: #333;
+}
+
 .App {
   text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 50px auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App.high-contrast {
+  background: rgba(0, 0, 0, 0.9);
+  color: yellow;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  background-color: #6200ea;
+  padding: 20px;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  margin-right: 20px;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a.active {
+  color: yellow;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+.App.high-contrast header {
+  background-color: lightgray;
+  color: yellow;
+}
+
+.App.high-contrast header nav a {
+  color: yellow;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-controls span {
+  margin-right: 10px;
+}
+
+.user-controls button, .user-controls a {
+  background-color: #6200ea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.App.high-contrast .user-controls button, .App.high-contrast .user-controls a {
+  background-color: yellow;
+  color: black;
+}
+
+.user-controls button:hover, .user-controls a:hover {
+  background-color: #3700b3;
+}
+
+.App.high-contrast .user-controls button:hover, .App.high-contrast .user-controls a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+footer {
+  background-color: rgba(255, 0, 0, 0.233);
+  padding: 1px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.App.high-contrast footer {
+  background-color: lightgray;
+  color: black;
+}
+
+main {
+  padding: 20px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+.App.high-contrast button {
+  background-color: yellow;
+  color: black;
+}
+
+.App.high-contrast button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.App.high-contrast input {
+  background-color: yellow;
+  color: black;
+  border: 1px solid yellow;
+}
+
+.about, .contact {
+  text-align: left;
+  padding: 20px;
+}
+
+.about section, .contact form {
+  margin: 20px 0;
+}
+
+.about h3, .contact h2 {
+  color: #6200ea;
+}
+
+.App.high-contrast .about h3, .App.high-contrast .contact h2 {
+  color: yellow;
+}
+
+.contact form div {
+  margin-bottom: 15px;
+}
+
+.contact form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background-color: #3700b3;
+}
+
+.App.high-contrast .contact form button {
+  background-color: yellow;
+  color: black;
+}
+
+.App.high-contrast .contact form button:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.contrast-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.contrast-toggle:hover {
+  background-color: #3700b3;
+}
+
+.App.high-contrast .contrast-toggle {
+  background-color: yellow;
+  color: black;
+}
+
+.App.high-contrast .contrast-toggle:hover {
+  background-color: yellow;
+  color: black;
+}
+
+
+.text-size-toggle {
+  position: fixed;
+  top: 80px;
+  left: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.text-size-toggle button {
+  margin: 0;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  background-color: #6200ea;
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.text-size-toggle button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-size-toggle button:hover:enabled {
+  background-color: #3700b3;
+}
+
+.profile-component {
+  margin: 20px 0;
+  padding: 10px;
+  border: 100px solid #ccc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.profile-component h2 {
+  margin-top: 0;
+}
+
+.profile-component img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.map-component {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.map-component h2 {
+  margin-top: 0;
+}
+
+.list-component ul {
+  list-style-type: none;
+  padding: 0;
 }
